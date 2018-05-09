@@ -50,11 +50,11 @@
         if(!arg.ssl){
             console.log('不存在');
             swal({
-                text: `请先安装SSL证书,路径在 ${arg.path}`,
+                text: `请先安装SSL证书,路径在 ${arg.path} 双击后 \n 安装教程参考 http://anyproxy.io/cn/#windows%E7%B3%BB%E7%BB%9F%E4%BF%A1%E4%BB%BBca%E8%AF%81%E4%B9%A6`,
             });
         }else{
             swal({
-                text: `证书生成完毕 如你已经安装请忽略 若无安装请安装证书,路径在 ${arg.path}`,
+                text: `证书生成完毕 如你已经安装请忽略 若无安装请安装证书,路径在 ${arg.path} \n 安装教程参考 http://anyproxy.io/cn/#windows%E7%B3%BB%E7%BB%9F%E4%BF%A1%E4%BB%BBca%E8%AF%81%E4%B9%A6`,
             })
         }
     });
@@ -64,6 +64,14 @@
 
         //获取真实地址
         console.log('down-list arg', arg);
+
+        if(typeof arg.dlink !=='object'){
+            swal({
+                title:"下载地址",
+                text:arg.dlink
+            });
+            return false;
+        }
 
         let str ='';
         let div = document.createElement('div');
