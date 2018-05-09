@@ -1,5 +1,5 @@
 # 说明
-一个低侵入式,原生UI,代码完全开源,无任何安全问题的百度外链直提器
+一个低侵入式,原生UI,代码完全开源,无任何用户层安全问题的百度外链直提器
 
 ![](http://cdn.emufan.com/img/pan-soul/multi.gif)
 ![](http://cdn.emufan.com/img/pan-soul/single.gif)
